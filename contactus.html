@@ -20,7 +20,7 @@
       .logo {
          margin: 0;
          margin-bottom: 10px; /* Added margin to move the logo up */
-	font-family:'Playfair Display', serif;/* Change the font here */
+	font-family: 'Playfair Display', serif; /* Change the font here */
          font-size: 36px;
       }
        .nav-link {
@@ -58,6 +58,27 @@
       .address {
          font-style: italic;
       }
+ .marquee {
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         padding: 0.5rem 0;
+         font-size: 16px;
+         font-style: italic;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         animation: marqueeScroll 20s linear infinite;
+      }
+
+      @keyframes marqueeScroll {
+         0% {
+            transform: translateX(100%);
+         }
+         100% {
+            transform: translateX(-100%);
+         }
+      }
    </style>
 </head>
 <body>
@@ -84,5 +105,7 @@
          </address>
       </div>
    </div>
+<div class="marquee">Delicious Bites Restaurant by Sheila Mae Munoz</div>
+
 </body>
 </html>
