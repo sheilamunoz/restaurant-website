@@ -47,6 +47,27 @@
          font-size: 18px;
          line-height: 1.6;
       }
+       .marquee {
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         padding: 0.5rem 0;
+         font-size: 16px;
+         font-style: italic;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         animation: marqueeScroll 20s linear infinite;
+      }
+
+      @keyframes marqueeScroll {
+         0% {
+            transform: translateX(100%);
+         }
+         100% {
+            transform: translateX(-100%);
+         }
+      }
    </style>
 </head>
 <body>
@@ -67,5 +88,7 @@
          <p>From family gatherings to romantic dinners, our inviting ambiance provides the ideal backdrop for any occasion. Whether you're a seasoned foodie or simply looking to savor exceptional cuisine, Delicious Bites Restaurant invites you to savor the joy of food and fellowship.</p>
       </div>
    </div>
+<div class="marquee">Delicious Bites Restaurant by Sheila Mae Munoz</div>
+
 </body>
 </html>
