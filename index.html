@@ -75,21 +75,6 @@
          <p>Experience the finest dining with our exquisite menu and warm hospitality.</p>
       </div>
    </div>
-	
-   <script>
-      const contentContainer = document.querySelector('.content');
-
-      function loadContent(pageName) {
-         fetch(pageName)
-            .then(response => response.text())
-            .then(content => {
-               contentContainer.innerHTML = content;
-            });
-      }
-
-      // Load the welcome content by default
-      loadContent('welcome.html');
-   </script>
 <div class="marquee">Delicious Bites Restaurant by Sheila Mae Munoz</div>
 </body>
 </html>
