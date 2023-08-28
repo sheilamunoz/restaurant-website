@@ -36,6 +36,27 @@
          padding: 2rem;
          text-align: center;
       }
+      .marquee {
+         background-color: #333;
+         color: #fff;
+         text-align: center;
+         padding: 0.5rem 0;
+         font-size: 16px;
+         font-style: italic;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         animation: marqueeScroll 20s linear infinite;
+      }
+
+      @keyframes marqueeScroll {
+         0% {
+            transform: translateX(100%);
+         }
+         100% {
+            transform: translateX(-100%);
+         }
+      }
    </style>
 </head>
 <body>
@@ -54,6 +75,21 @@
          <p>Experience the finest dining with our exquisite menu and warm hospitality.</p>
       </div>
    </div>
-  
+	
+   <script>
+      const contentContainer = document.querySelector('.content');
+
+      function loadContent(pageName) {
+         fetch(pageName)
+            .then(response => response.text())
+            .then(content => {
+               contentContainer.innerHTML = content;
+            });
+      }
+
+      // Load the welcome content by default
+      loadContent('welcome.html');
+   </script>
+<div class="marquee">Delicious Bites Restaurant by Sheila Mae Munoz</div>
 </body>
 </html>
